@@ -26,6 +26,7 @@ TEST_TARGET = test_$(TARGET)
 
 all : test $(TARGET)
 test : $(TEST_TARGET)
+	./$(TEST_TARGET)
 
 $(TARGET) : $(OBJS)
 	gcc $(OBJS) $(LIBS) -o $@
