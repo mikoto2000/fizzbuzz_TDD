@@ -5,6 +5,10 @@ char* fizzbuzz_get_answer(fizzbuzz_number_t number) {
         return "Fizz";
     }
 
+    if (number % 5 == 0) {
+        return "Buzz";
+    }
+
     return "";
 }
 
