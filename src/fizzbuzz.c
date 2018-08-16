@@ -1,6 +1,10 @@
 #include "fizzbuzz.h"
 
 char* fizzbuzz_get_answer(fizzbuzz_number_t number) {
+    if (number % 15 == 0) {
+        return "FizzBuzz";
+    }
+
     if (number % 3 == 0) {
         return "Fizz";
     }
