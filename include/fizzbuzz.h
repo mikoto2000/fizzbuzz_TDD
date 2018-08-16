@@ -1,4 +1,4 @@
-/** エラーコード */
+/** fizzbuzz 用の型定義 */
 typedef unsigned char fizzbuzz_number_t;
 
 /**
