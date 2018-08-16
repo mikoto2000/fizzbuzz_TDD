@@ -6,9 +6,9 @@
 #   +- src/     : ソースコード
 #   +- test/    : テストコード
 # ```
-SRCS = TODO
+SRCS = ./src/fizzbuzz.c
 TEST_SRCS = ./test/test_fizzbuzz.cpp
-CFLAGS =
+CFLAGS = -I ./include
 LIBS =
 TARGET = fizzbuzz
 OBJS = $(subst .c,.o,$(SRCS))
@@ -17,7 +17,7 @@ ifeq ($(OS),Windows_NT)
 TARGET := $(TARGET).exe
 endif
 
-TEST_OBJS = $(subst .cpp,.o,$(TEST_SRCS))
+TEST_OBJS = $(OBJS) $(subst .cpp,.o,$(TEST_SRCS))
 TEST_CFLAGS = $(CFLAGS)
 TEST_LIBS = $(LIBS) -lgtest -lgtest_main
 TEST_TARGET = test_$(TARGET)
@@ -28,13 +28,13 @@ all : test $(TARGET)
 test : $(TEST_TARGET)
 
 $(TARGET) : $(OBJS)
-	g++ $(OBJS) $(LIBS) -o $@
+	gcc $(OBJS) $(LIBS) -o $@
 
 $(TEST_TARGET) : $(TEST_OBJS)
 	g++ $(TEST_OBJS) $(TEST_LIBS) -o $@
 
 .c.o :
-	g++ -c $(CFLAGS) -I. $< -o $@
+	gcc -c $(CFLAGS) -I. $< -o $@
 
 .cpp.o :
 	g++ -c $(TEST_CFLAGS) -I. $< -o $@
