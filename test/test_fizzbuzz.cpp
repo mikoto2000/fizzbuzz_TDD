@@ -18,5 +18,10 @@ TEST(fizzbuzz_get_answer, 5) {
     ASSERT_STREQ("Buzz", fizzbuzz_get_answer(10));
 }
 
+TEST(fizzbuzz_get_answer, 3_and_5) {
+    ASSERT_STREQ("FizzBuzz", fizzbuzz_get_answer(15));
+    ASSERT_STREQ("FizzBuzz", fizzbuzz_get_answer(30));
+}
+
 }
 
