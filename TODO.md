@@ -23,7 +23,7 @@
 ## 開発環境
 
 1. [x] : '.gitignore' 整備
-2. [ ] : Google Test 動作確認
+2. [x] : Google Test 動作確認
 
 
 ### ルール
