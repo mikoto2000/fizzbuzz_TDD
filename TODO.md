@@ -22,7 +22,7 @@
 
 ## 開発環境
 
-1. [ ] : '.gitignore' 整備
+1. [x] : '.gitignore' 整備
 2. [ ] : Google Test 動作確認
 
 
