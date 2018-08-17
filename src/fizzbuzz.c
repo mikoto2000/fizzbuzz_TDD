@@ -24,3 +24,8 @@ char* fizzbuzz_get_answer(fizzbuzz_number_t number) {
     return buf;
 }
 
+char* fizzbuzz_answer_array[1] = {""};
+char** fizzbuzz_get_answer_array(fizzbuzz_number_t number) {
+    return fizzbuzz_answer_array;
+}
+

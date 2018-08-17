@@ -29,5 +29,24 @@ TEST(fizzbuzz_get_answer, 1_and_2_and_4) {
     ASSERT_STREQ("4", fizzbuzz_get_answer(4));
 }
 
+TEST(fizzbuzz_get_answer_array, 15) {
+    char** answers = fizzbuzz_get_answer_array(15);
+    ASSERT_STREQ("1", answers[0]);
+    ASSERT_STREQ("2", answers[1]);
+    ASSERT_STREQ("Fizz", answers[2]);
+    ASSERT_STREQ("4", answers[3]);
+    ASSERT_STREQ("Buzz", answers[4]);
+    ASSERT_STREQ("Fizz", answers[5]);
+    ASSERT_STREQ("7", answers[6]);
+    ASSERT_STREQ("8", answers[7]);
+    ASSERT_STREQ("Fizz", answers[8]);
+    ASSERT_STREQ("Buzz", answers[9]);
+    ASSERT_STREQ("11", answers[10]);
+    ASSERT_STREQ("Fizz", answers[11]);
+    ASSERT_STREQ("13", answers[12]);
+    ASSERT_STREQ("14", answers[13]);
+    ASSERT_STREQ("FizzBuzz", answers[14]);
+}
+
 }
 
