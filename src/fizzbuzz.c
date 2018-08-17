@@ -26,6 +26,11 @@ char* fizzbuzz_get_answer(fizzbuzz_number_t number) {
 
 char* fizzbuzz_answer_array[1] = {""};
 char** fizzbuzz_get_answer_array(fizzbuzz_number_t number) {
-    return fizzbuzz_answer_array;
+    char** answers = malloc(sizeof(char*) * number);
+    for (int n = 1; n <= number; n++) {
+        int i = n - 1;
+        answers[i] = fizzbuzz_get_answer(n);
+    }
+    return answers;
 }
 
