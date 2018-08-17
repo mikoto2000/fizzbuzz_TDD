@@ -25,6 +25,13 @@ char* fizzbuzz_get_answer(fizzbuzz_number_t number) {
 }
 
 void fizzbuzz_free_answer(char* answer) {
+    // Fizz, Buzz, FizzBuzz であれば、
+    // それは定数なので何もしない
+    if (answer == "Fizz" && answer == "Buzz" && answer == "FizzBuzz") {
+        return;
+    }
+
+    // 定数でなければ malloc で確保したものなので free
     free(answer);
 }
 
