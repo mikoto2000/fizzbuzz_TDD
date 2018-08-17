@@ -24,6 +24,10 @@ char* fizzbuzz_get_answer(fizzbuzz_number_t number) {
     return buf;
 }
 
+void fizzbuzz_free_answer(char* answer) {
+    free(answer);
+}
+
 char** fizzbuzz_get_answer_array(fizzbuzz_number_t number) {
     char** answers = malloc(sizeof(char*) * number);
     for (int n = 1; n <= number; n++) {

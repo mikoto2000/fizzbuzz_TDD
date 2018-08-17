@@ -8,8 +8,19 @@ typedef unsigned char fizzbuzz_number_t;
  *
  * @description この関数で取得した文字列は、 fizzbuzz_free_answer() で開放してください。
  *
+ * @see fizzbuzz_free_answer
+ *
  */
 char* fizzbuzz_get_answer(fizzbuzz_number_t number);
+
+/**
+ * @fn fizzbuzz_get_answer で取得したメモリを解放する。
+ * @param (answer) 解放したい回答
+ *
+ * @see fizzbuzz_get_answer
+ *
+ */
+void fizzbuzz_free_answer(char* answer);
 
 /**
  * @fn fizzbuzz ルールに従い、1 から指定された番号までの回答を返却する。
