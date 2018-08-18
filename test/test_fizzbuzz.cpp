@@ -61,5 +61,13 @@ TEST(fizzbuzz_get_answer_array, 15) {
     ASSERT_STREQ("FizzBuzz", answers[14]);
 }
 
+TEST(fizzbuzz_free_answer_array, 15) {
+    // 「free されているか？」のテストは難しいので、
+    // 呼び出して落ちなければ OK とする。
+    int size = 15;
+    fizzbuzz_answer_t* fifteen = fizzbuzz_get_answer_array(size);
+    fizzbuzz_free_answer_array(size, fifteen);
+}
+
 }
 

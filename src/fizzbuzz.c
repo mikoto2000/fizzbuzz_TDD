@@ -44,3 +44,6 @@ fizzbuzz_answer_t* fizzbuzz_get_answer_array(fizzbuzz_number_t number) {
     return answers;
 }
 
+void fizzbuzz_free_answer_array(int answer_c, fizzbuzz_answer_t* answers) {
+}
+
