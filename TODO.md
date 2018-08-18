@@ -59,10 +59,11 @@
         2-2. [x] : "Buzz" 文字列の場合は何もしない
         2-3. [x] : "FizzBuzz" 文字列の場合は何もしない
         2-4. [x] : 数字文字列の場合は、そのメモリを開放する
-- [ ] : fizzbuzz_get_answer_array で `char**` を返却すると、それを開放するときどうするか問題が発生する
+- [x] : fizzbuzz_get_answer_array で `char**` を返却すると、それを開放するときどうするか問題が発生する
     - -> fizzbuzz_get_answer_array で取得したメモリは、呼び出し側に開放してもらうようにする。
-    1.  [ ] : fizzbuzz の回答文字列の配列を `char**` から `fizzbuzz_answer_array_t` に変更
-    2.  [ ] : fizzbuzz_free_answer_array を実装
+    1.  [x] : fizzbuzz の回答文字列の配列を `char**` から `fizzbuzz_answer_array_t` に変更
+        - -> `fizzbuzz_answer_t*` で十分だったのでこれは無しとした
+    2.  [x] : fizzbuzz_free_answer_array を実装
         - 2-1. 配列の要素すべてに `fizzbuzz_free_answer` を行う
         - 2-2. 自分自身を `free` する
 
