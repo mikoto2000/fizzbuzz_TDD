@@ -6,7 +6,7 @@
 #   +- src/     : ソースコード
 #   +- test/    : テストコード
 # ```
-SRCS = ./src/fizzbuzz.c
+SRCS = ./src/fizzbuzz.c ./src/main.c
 TEST_SRCS = ./test/test_fizzbuzz.cpp
 CFLAGS = -I ./include
 LIBS =
@@ -32,7 +32,7 @@ $(TARGET) : $(OBJS)
 	gcc $(OBJS) $(LIBS) -o $@
 
 $(TEST_TARGET) : $(TEST_OBJS)
-	g++ $(TEST_OBJS) $(TEST_LIBS) -o $@
+	g++ $(filter-out ./src/main.o, $(TEST_OBJS)) $(TEST_LIBS) -o $@
 
 .c.o :
 	gcc -c $(CFLAGS) -I. $< -o $@
