@@ -45,5 +45,10 @@ fizzbuzz_answer_t* fizzbuzz_get_answer_array(fizzbuzz_number_t number) {
 }
 
 void fizzbuzz_free_answer_array(int answer_c, fizzbuzz_answer_t* answers) {
+    for (int i = 0; i < answer_c; i++) {
+        fizzbuzz_free_answer(answers[i]);
+    }
+
+    free(answers);
 }
 
