@@ -1,5 +1,6 @@
 /** fizzbuzz 用の型定義 */
 typedef unsigned char fizzbuzz_number_t;
+typedef char* fizzbuzz_answer_t;
 
 /**
  * @fn fizzbuzz ルールに従い、番号に対応する回答を返却する。
@@ -11,7 +12,7 @@ typedef unsigned char fizzbuzz_number_t;
  * @see fizzbuzz_free_answer
  *
  */
-char* fizzbuzz_get_answer(fizzbuzz_number_t number);
+fizzbuzz_answer_t fizzbuzz_get_answer(fizzbuzz_number_t number);
 
 /**
  * @fn fizzbuzz_get_answer で取得したメモリを解放する。
@@ -20,7 +21,7 @@ char* fizzbuzz_get_answer(fizzbuzz_number_t number);
  * @see fizzbuzz_get_answer
  *
  */
-void fizzbuzz_free_answer(char* answer);
+void fizzbuzz_free_answer(fizzbuzz_answer_t answer);
 
 /**
  * @fn fizzbuzz ルールに従い、1 から指定された番号までの回答を返却する。

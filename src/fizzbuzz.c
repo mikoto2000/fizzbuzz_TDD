@@ -6,7 +6,7 @@
 // 最大 3 桁 + '\0' で 4 に設定。
 #define MAX_DIGIT 4
 
-char* fizzbuzz_get_answer(fizzbuzz_number_t number) {
+fizzbuzz_answer_t fizzbuzz_get_answer(fizzbuzz_number_t number) {
     if (number % 15 == 0) {
         return "FizzBuzz";
     }
@@ -19,12 +19,12 @@ char* fizzbuzz_get_answer(fizzbuzz_number_t number) {
         return "Buzz";
     }
 
-    char* buf = (void*)malloc(sizeof(char) * MAX_DIGIT);
+    fizzbuzz_answer_t buf = malloc(sizeof(char) * MAX_DIGIT);
     snprintf(buf, MAX_DIGIT, "%d", number);
     return buf;
 }
 
-void fizzbuzz_free_answer(char* answer) {
+void fizzbuzz_free_answer(fizzbuzz_answer_t answer) {
     // Fizz, Buzz, FizzBuzz であれば、
     // それは定数なので何もしない
     if (answer == "Fizz" || answer == "Buzz" || answer == "FizzBuzz") {
@@ -36,7 +36,7 @@ void fizzbuzz_free_answer(char* answer) {
 }
 
 char** fizzbuzz_get_answer_array(fizzbuzz_number_t number) {
-    char** answers = malloc(sizeof(char*) * number);
+    char** answers = malloc(sizeof(fizzbuzz_answer_t) * number);
     for (int n = 1; n <= number; n++) {
         int i = n - 1;
         answers[i] = fizzbuzz_get_answer(n);

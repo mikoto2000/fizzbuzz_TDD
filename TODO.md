@@ -51,14 +51,14 @@
 
 ### 課題
 
-- [ ] : fizzbuzz_get_answer で `char*` を返却すると、それを開放するときどうするか問題が発生する
+- [x] : fizzbuzz_get_answer で `char*` を返却すると、それを開放するときどうするか問題が発生する
     - -> fizzbuzz_get_answer で取得したメモリは、呼び出し側に開放してもらうようにする。
-    1.  [ ] : fizzbuzz の回答文字列を `char*` から `fizzbuzz_answer_t` に変更
-    2.  [ ] : fizzbuzz_free_answer を実装
-        2-1. [ ] : "Fizz" 文字列の場合は何もしない
-        2-2. [ ] : "Buzz" 文字列の場合は何もしない
-        2-3. [ ] : "FizzBuzz" 文字列の場合は何もしない
-        2-4. [ ] : 数字文字列の場合は、そのメモリを開放する
+    1.  [x] : fizzbuzz の回答文字列を `char*` から `fizzbuzz_answer_t` に変更
+    2.  [x] : fizzbuzz_free_answer を実装
+        2-1. [x] : "Fizz" 文字列の場合は何もしない
+        2-2. [x] : "Buzz" 文字列の場合は何もしない
+        2-3. [x] : "FizzBuzz" 文字列の場合は何もしない
+        2-4. [x] : 数字文字列の場合は、そのメモリを開放する
 - [ ] : fizzbuzz_get_answer_array で `char**` を返却すると、それを開放するときどうするか問題が発生する
     - -> fizzbuzz_get_answer_array で取得したメモリは、呼び出し側に開放してもらうようにする。
     1.  [ ] : fizzbuzz の回答文字列の配列を `char**` から `fizzbuzz_answer_array_t` に変更
