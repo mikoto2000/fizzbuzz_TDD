@@ -34,4 +34,15 @@ void fizzbuzz_free_answer(fizzbuzz_answer_t answer);
  *     >>> fizzbuzz_get_answer_array(3)
  *     ["1", "2", "Fizz"]
  */
-char** fizzbuzz_get_answer_array(fizzbuzz_number_t number);
+fizzbuzz_answer_t* fizzbuzz_get_answer_array(fizzbuzz_number_t number);
+
+/**
+ * @fn fizzbuzz_get_answer_array で取得したメモリを解放する。
+ * @param (answer_c) 解放したい回答配列のサイズ
+ * @param (answers) 解放したい回答配列
+ *
+ * @see fizzbuzz_get_answer_array
+ *
+ */
+void fizzbuzz_free_answer_array(int answer_c, fizzbuzz_answer_t* answers);
+

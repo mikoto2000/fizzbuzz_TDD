@@ -35,8 +35,8 @@ void fizzbuzz_free_answer(fizzbuzz_answer_t answer) {
     free(answer);
 }
 
-char** fizzbuzz_get_answer_array(fizzbuzz_number_t number) {
-    char** answers = malloc(sizeof(fizzbuzz_answer_t) * number);
+fizzbuzz_answer_t* fizzbuzz_get_answer_array(fizzbuzz_number_t number) {
+    fizzbuzz_answer_t* answers = malloc(sizeof(fizzbuzz_answer_t) * number);
     for (int n = 1; n <= number; n++) {
         int i = n - 1;
         answers[i] = fizzbuzz_get_answer(n);
