@@ -1,4 +1,8 @@
 **/*.o
+**/*.gcovo
+**/*.gcda
+**/*.gcno
+*.gcov
 fizzbuzz
 fizzbuzz.exe
 test_fizzbuzz
